@@ -10,15 +10,15 @@ app.use(express.json());
 app.use(cors())
 
 //local host mongodb compass
-// mongoose.connect("mongodb://localhost:27017/recipesDB").then(()=>{
-//     console.log("Connected to MongoDB")
-// })
-
-//atlas connection string
-mongoose.connect("mongodb+srv://anndre-18:sherrlyn31@cluster0.5afem.mongodb.net/recipeDB")//returns a promise
-.then(()=>{
+mongoose.connect("mongodb://localhost:27017/recipesDB").then(()=>{
     console.log("Connected to MongoDB")
 })
+
+//atlas connection string
+// mongoose.connect("mongodb+srv://anndre-18:sherrlyn31@cluster0.5afem.mongodb.net/recipeDB")//returns a promise
+// .then(()=>{
+//     console.log("Connected to MongoDB")
+// })
 
 const userSchema= new mongoose.Schema({
     id:{type:String,required:true,unique:true},

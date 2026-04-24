@@ -388,7 +388,7 @@ app.get("/api/users/:userId/favorites", async (req, res) => {
 });
 
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+// const PORT = process.env.PORT || 5000;
+app.listen(REACT_APP_API_URL, () => {
+  console.log(`Server running on port ${REACT_APP_API_URL}`);
 });

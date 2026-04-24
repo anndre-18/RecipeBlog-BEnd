@@ -10,7 +10,10 @@ const cors = require('cors')
 const bodyParser=require('body-parser');
 const nodemailer = require("nodemailer");
 app.use(express.json());
-app.use(cors())
+app.use(cors({
+  origin: "https://recipeblog-fend.onrender.com",
+  credentials: true
+}));
 app.use(bodyParser.json());
 
 //local host mongodb compass

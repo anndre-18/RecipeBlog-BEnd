@@ -11,7 +11,7 @@ const bodyParser=require('body-parser');
 const nodemailer = require("nodemailer");
 app.use(express.json());
 app.use(cors({
-  origin: "https://recipeblog-fend.onrender.com",
+  origin: "https://recipe-blog-f-end.vercel.app",
   credentials: true
 }));
 app.use(bodyParser.json());

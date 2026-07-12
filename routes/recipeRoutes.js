@@ -6,11 +6,13 @@ const {
   createRecipe,
   deleteRecipe,
   updateRecipe,
+  getMyRecipes,
 } = require("../controllers/recipeController");
 
 const router = express.Router();
 
 router.get("/", getAllRecipes);
+router.get("/mine", authMiddleware, getMyRecipes);
 router.get("/:id", getRecipeById);
 router.post("/", authMiddleware, createRecipe);
 router.delete("/:id", authMiddleware, deleteRecipe);
